@@ -75,17 +75,6 @@ setwd("data_explorer")
 shiny::runApp()
 ```
 
-## Data Sources
-
-Both applications generate simulated clinical trial data for demonstration purposes. The data structures are designed to mimic real-world clinical trial datasets and can be easily adapted for actual data analysis.
-
-## Contributing
-
-Feel free to enhance these applications by:
-- Adding new analysis modules
-- Improving the user interface
-- Optimizing performance
-- Adding new visualization options
 
 ## License
 
