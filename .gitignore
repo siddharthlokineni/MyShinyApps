@@ -1,0 +1,20 @@
+# System files
+.DS_Store
+*.log
+*.tmp
+Thumbs.db
+
+# R specific
+.RData
+.Rhistory
+.Rapp.history
+
+# Exclude everything in parent directories
+../*
+!../shinyapps/
+!../shinyapps/**
+
+# Exclude Downloads and other directories
+../../Downloads/
+../../autoTDD-Final-Package/
+../../TD-domains-automation-project/
