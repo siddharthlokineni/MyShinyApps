@@ -62,9 +62,9 @@ app <- init(
       add_total = TRUE
     ),
     
-    # Adverse Events by Body System and Preferred Terms (Hierarchical)
+    # Adverse Events by Body System
     tm_t_events_summary(
-      label = "Adverse Events by Body System and Preferred Terms",
+      label = "Adverse Events by Body System",
       dataname = "ADAE",
       parentname = "ADSL",
       arm_var = choices_selected(
@@ -72,8 +72,24 @@ app <- init(
         selected = "ARM"
       ),
       llt = choices_selected(
-        variable_choices("ADAE", c("AEBODSYS", "AEDECOD")),
-        selected = c("AEBODSYS", "AEDECOD")
+        variable_choices("ADAE", c("AEBODSYS")),
+        selected = "AEBODSYS"
+      ),
+      add_total = TRUE
+    ),
+    
+    # Adverse Events by Preferred Terms
+    tm_t_events_summary(
+      label = "Adverse Events by Preferred Terms",
+      dataname = "ADAE",
+      parentname = "ADSL",
+      arm_var = choices_selected(
+        variable_choices("ADSL", c("ARM", "ARMCD")),
+        selected = "ARM"
+      ),
+      llt = choices_selected(
+        variable_choices("ADAE", c("AEDECOD")),
+        selected = "AEDECOD"
       ),
       add_total = TRUE
     ),
@@ -292,7 +308,8 @@ for (name in names(app_data)) {
 cat("\nAnalysis Modules:\n")
 cat("- Demographics Table (tern/rtables)\n")
 cat("- Adverse Events Summary\n")
-cat("- Adverse Events by Body System and Preferred Terms (Hierarchical)\n")
+cat("- Adverse Events by Body System\n")
+cat("- Adverse Events by Preferred Terms\n")
 cat("- Adverse Events by System Organ Class (SOC)\n")
 cat("- Detailed SOC Analysis by Treatment Arm\n")
 cat("- Laboratory Summary by Visit\n")
