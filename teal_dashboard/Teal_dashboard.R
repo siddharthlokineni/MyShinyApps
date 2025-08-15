@@ -62,61 +62,33 @@ app <- init(
       add_total = TRUE
     ),
     
-    # Adverse Events by Body System
-    tm_t_events_summary(
-      label = "Adverse Events by Body System",
+    # 2. Detailed SOC → Preferred Terms breakdown
+    # Hierarchical AE Table: SOC with nested Preferred Terms
+    tm_t_events(
+      label = "Adverse Events by SOC and Preferred Terms",
       dataname = "ADAE",
       parentname = "ADSL",
       arm_var = choices_selected(
         variable_choices("ADSL", c("ARM", "ARMCD")),
         selected = "ARM"
       ),
-      llt = choices_selected(
-        variable_choices("ADAE", c("AEBODSYS")),
-        selected = "AEBODSYS"
-      ),
-      add_total = TRUE
-    ),
-    
-    # Adverse Events by Preferred Terms
-    tm_t_events_summary(
-      label = "Adverse Events by Preferred Terms",
-      dataname = "ADAE",
-      parentname = "ADSL",
-      arm_var = choices_selected(
-        variable_choices("ADSL", c("ARM", "ARMCD")),
-        selected = "ARM"
+      hlt = choices_selected(
+        variable_choices("ADAE", c("AESOC")),
+        selected = "AESOC"
       ),
       llt = choices_selected(
         variable_choices("ADAE", c("AEDECOD")),
         selected = "AEDECOD"
       ),
-      add_total = TRUE
-    ),
-    
-    # Detailed SOC Analysis by Treatment Arm
-    tm_t_summary_by(
-      label = "Detailed SOC Analysis by Treatment Arm",
-      dataname = "ADAE",
-      parentname = "ADSL",
-      arm_var = choices_selected(
-        variable_choices("ADSL", c("ARM", "ARMCD")),
-        selected = "ARM"
-      ),
-      by_vars = choices_selected(
-        variable_choices("ADAE", c("AESOC")),
-        selected = "AESOC"
-      ),
-      summarize_vars = choices_selected(
-        variable_choices("ADAE", c("AESEV", "AESER")),
-        selected = c("AESEV", "AESER")
-      ),
-      useNA = "ifany"
+      add_total = TRUE,
+      drop = TRUE,
+      prune_freq = 0.05,  # Only show events occurring in >5% of patients
+      prune_diff = 0      # Show all differences
     ),
     
     # Laboratory Analysis
     tm_t_summary_by(
-      label = "Laboratory Summary by Visit",
+      label = "Laboratory Summary",
       dataname = "ADLB",
       parentname = "ADSL",
       arm_var = choices_selected(
