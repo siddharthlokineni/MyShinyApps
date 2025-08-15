@@ -72,8 +72,8 @@ app <- init(
         selected = "ARM"
       ),
       llt = choices_selected(
-        variable_choices("ADAE", c("AEBODSYS")),
-        selected = "AEBODSYS"
+        variable_choices("ADAE", c("AEBODSYS", "AEDECOD")),
+        selected = c("AEBODSYS", "AEDECOD")
       ),
       add_total = TRUE
     ),
