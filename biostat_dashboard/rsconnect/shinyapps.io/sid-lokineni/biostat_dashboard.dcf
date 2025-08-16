@@ -1,0 +1,12 @@
+name: biostat_dashboard
+title: biostat_dashboard
+username: sid-lokineni
+account: sid-lokineni
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15211656
+bundleId: 10777321
+url: https://sid-lokineni.shinyapps.io/biostat_dashboard/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,12 @@
+name: Patient_Journey
+title: Patient_Journey
+username: sid-lokineni
+account: sid-lokineni
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15212963
+bundleId: 10778478
+url: https://sid-lokineni.shinyapps.io/Patient_Journey/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

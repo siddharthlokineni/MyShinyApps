@@ -1,0 +1,12 @@
+name: data_explorer
+title: data_explorer
+username: sid-lokineni
+account: sid-lokineni
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15211759
+bundleId: 10777384
+url: https://sid-lokineni.shinyapps.io/data_explorer/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

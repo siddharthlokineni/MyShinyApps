@@ -1,0 +1,10 @@
+name: teal_dashboard
+title: teal_dashboard
+username: sid-lokineni
+account: sid-lokineni
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15210504
+bundleId: 10776810
+url: https://sid-lokineni.shinyapps.io/teal_dashboard/
+version: 1
