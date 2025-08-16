@@ -2,20 +2,52 @@
 
 A collection of R Shiny applications for clinical trial data analysis and exploration.
 
+## Deployed Applications
+
+All applications are deployed and accessible at the following URLs:
+
+1. [Teal Dashboard](https://sid-lokineni.shinyapps.io/teal_dashboard/) - Interactive analysis of clinical trial data
+2. [Safety Dashboard](https://sid-lokineni.shinyapps.io/safety-dashboard-v1/) - Clinical Safety Dashboard
+3. [Biostat Dashboard](https://sid-lokineni.shinyapps.io/biostat_dashboard/) - Clinical Trial Survival Analysis
+4. [Patient Journey](https://sid-lokineni.shinyapps.io/Patient_Journey/) - Enhanced Clinical Trial Patient Journey Analysis
+5. [Data Explorer](https://sid-lokineni.shinyapps.io/data_explorer/) - Clinical Trial Data Explorer
+
 ## Project Structure
 
 ```
 MyShinyApps/
 ├── README.md                    # Main project documentation
 ├── biostat_dashboard/          # Clinical trial survival analysis app
-│   └── README.md              # App-specific documentation
-└── data_explorer/             # Clinical trial data explorer app
-    └── README.md              # App-specific documentation
+├── data_explorer/             # Clinical trial data explorer app
+├── PV/                       # Safety/Pharmacovigilance dashboard
+├── sankey/                  # Patient Journey visualization app
+└── teal_dashboard/         # Teal-based CDISC analysis app
 ```
 
 ## Applications
 
-### 1. Biostat Dashboard (`biostat_dashboard/`)
+### 1. Teal Dashboard (`teal_dashboard/`)
+
+An interactive CDISC data analysis dashboard built with teal, tern, and rtables featuring:
+- Demographics Tables
+- Adverse Events Analysis
+- Laboratory Data Analysis
+- Vital Signs Summary
+- Interactive Data Explorer
+- Variable Browser
+- Report Generation
+
+### 2. Safety Dashboard (`PV/`)
+
+A comprehensive pharmacovigilance dashboard featuring:
+- AE Trends Over Time
+- Signal Detection
+- Risk Assessment
+- Regulatory Reporting
+- Study Comparison
+- Causality Assessment
+
+### 3. Biostat Dashboard (`biostat_dashboard/`)
 
 A comprehensive dashboard for clinical trial survival analysis featuring:
 - Kaplan-Meier survival curves
@@ -30,7 +62,16 @@ A comprehensive dashboard for clinical trial survival analysis featuring:
 - Comprehensive statistical summaries
 - Interactive data exploration
 
-### 2. Data Explorer (`data_explorer/`)
+### 4. Patient Journey (`sankey/`)
+
+A Sankey diagram-based visualization tool for patient flow analysis:
+- Demographic flow visualization
+- Treatment pathways
+- Adverse event tracking
+- Response monitoring
+- Outcome analysis
+
+### 5. Data Explorer (`data_explorer/`)
 
 A CDISC-compliant clinical trial data exploration tool featuring:
 - Demographics analysis
@@ -61,20 +102,14 @@ A CDISC-compliant clinical trial data exploration tool featuring:
 3. Install required packages
 4. Run the app using `shiny::runApp()`
 
-### Running the Apps
+### Running the Apps Locally
 
-**Biostat Dashboard:**
+Each app can be run locally using:
+
 ```r
-setwd("biostat_dashboard")
+setwd("app_directory")  # Replace with specific app directory
 shiny::runApp()
 ```
-
-**Data Explorer:**
-```r
-setwd("data_explorer")
-shiny::runApp()
-```
-
 
 ## License
 
