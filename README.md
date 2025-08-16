@@ -19,7 +19,7 @@ MyShinyApps/
 ├── README.md                    # Main project documentation
 ├── biostat_dashboard/          # Clinical trial survival analysis app
 ├── data_explorer/             # Clinical trial data explorer app
-├── PV/                       # Safety/Pharmacovigilance dashboard
+├── Safety/                       # Safety dashboard
 ├── sankey/                  # Patient Journey visualization app
 └── teal_dashboard/         # Teal-based CDISC analysis app
 ```
